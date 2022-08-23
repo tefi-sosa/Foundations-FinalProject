@@ -4,7 +4,12 @@ const path = require('path')
 
 const app = express()
 
-const { hikes } = require('./seed')
+app.use(express.json())
+app.use(cors())
+
+
+// const { hikes } = require('./seed')
+
 const{ getAllHikes } = require("./controller")
 
 app.get(`/api/hikes`, getAllHikes);
@@ -12,7 +17,7 @@ app.get(`/api/hikes`, getAllHikes);
 
 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)

@@ -1,32 +1,24 @@
-const baseURL = `http://localhost:3000/api/hikes`
+const baseURL = `http://localhost:4000/api/hikes`
 
 const hikesContainer = document.querySelector('#hike-cards')
 
-const getAllHikes = () => {
-  axios.get(baseURL).then(({ data: hikes }) => 
-    displayHikes(hikes)
+const hikesCallback = ({ data: hikes}) => displayHikes(hikes)
+const errCallback = err => console.log(err)
 
-  ).catch(console.log(err))
+const getAllHikes = () => {
+  axios.get(baseURL).then(hikesCallback).catch(errCallback)
 }
 
 
 
 
-function createHikeCard(house) {
+
+function createHikeCard(hike) {
   const hikeCard = document.createElement('div')
   hikeCard.classList.add('hike-card')
 
   hikeCard.innerHTML = `
-  <img alt='house cover image' src=${house.imageURL} class="house-cover-image"/>
-  <p class="address">${house.address}</p>
-  <div class="btns-container">
-      <button onclick="updateHouse(${house.id}, 'minus')">-</button>
-      <p class="house-price">$${house.price}</p>
-      <button onclick="updateHouse(${house.id}, 'plus')">+</button>
-  </div>
-  <button onclick="deleteHouse(${house.id})">delete</button>
-  `
-
+  <h1>${hike.name}</h1>`
 
   hikesContainer.appendChild(hikeCard)
 }
