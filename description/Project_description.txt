@@ -1,0 +1,10 @@
+For this project, I am planning on creating a HIKING PAGE. 
+
+The main idea will be creating a list of hikes or destination places that the user will be able to:
+-Search/filter per name, location, dificulty, ratings and/or any other aspects of the hike.
+-Add to a favorite list
+-Remove from the favorite list
+-Rate the hike
+
+The webpage should have a homepage that shows a basic idea of what the site is for. It will have an 'about' section, 'discover' section and 'favorites' section.
+The discover section is where the user can look for hikes and add them to favorites list. The favorites section will show the hikes that have been favorited. User should be able to unfavorite them from here
