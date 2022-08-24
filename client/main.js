@@ -18,7 +18,12 @@ function createHikeCard(hike) {
   hikeCard.classList.add('hike-card')
 
   hikeCard.innerHTML = `
-  <h1>${hike.name}</h1>`
+  <h3>${hike.name}</h3>
+  <img class="hike-img" src="${hike.url}" alt="">
+  <p>Difficulty: ${hike.difficulty}</p>
+  <p>Rating: ${hike.rating}</p>
+  <p>Location: ${hike.location}</p>
+  `
 
   hikesContainer.appendChild(hikeCard)
 }

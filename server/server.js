@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
@@ -8,7 +9,8 @@ app.use(express.json())
 app.use(cors())
 
 
-// const { hikes } = require('./seed')
+const { seed } = require('./seed')
+app.post('/seed', seed);
 
 const{ getAllHikes } = require("./controller")
 

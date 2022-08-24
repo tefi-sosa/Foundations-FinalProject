@@ -4,11 +4,35 @@
   margin: 0;
 }
 
+body {
+  background-color: #38343A;
+  font-family: 'Inter', sans-serif;
+  color: aliceblue;
+}
+
+button {
+  background-color: rgb(226, 148, 102, 0.7);
+  border: 0;
+  color: aliceblue;
+  padding: 1rem 2rem;
+  display: inline-block;
+  transition: 0.3s;
+  max-width: fit-content;
+}
+
+button:hover {
+  background-color: rgb(226, 148, 102, 1);
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
 
 .container{
-  max-width: 968px;
-  margin-left: 50px;
-  margin-right: 20px;
+  max-width: 500px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .grid{
@@ -46,8 +70,7 @@ image {
 }
 
 #home {
-  margin-top: 20%;
-  color: aliceblue;
+  margin-top: 15%;
 }
 
 .home-img {
@@ -64,4 +87,29 @@ image {
   position: relative;
   height: calc(100vh - 80vh);
   row-gap: 3rem;
+}
+
+
+/* DISCOVER PAGE */
+
+#hike-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hike-card {
+  background-color: rgb(226, 148, 102, 0.7);
+  padding: 20px;
+}
+
+.hike-card:hover {
+  background-color: rgb(226, 148, 102, 1);
+}
+
+.hike-img {
+  width: 350px;
+  height: 370px;
+  object-fit: cover;
+  margin: 20px 0;
 }
