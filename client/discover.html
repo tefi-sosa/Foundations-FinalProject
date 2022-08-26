@@ -12,29 +12,32 @@
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
   crossorigin="anonymous"></script>
 
-  <!-- CSS -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/43124feaf5.js" crossorigin="anonymous"></script>
 
-  <!-- FAVICON -->
-  <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/style">
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Cairo:wght@300;400;600;700&family=Cormorant+SC:wght@300;400;700&family=Inconsolata:wght@200;300;400;600&family=Inter:wght@100;200;400&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <title>Document</title>
+  <title>Discover</title>
 </head>
 <body>
 
-  <!-- <header>
+  <header>
 
     <section id="nav">
 
       <div class="container-fluid"> -->
 
         <!-- Nav Bar -->
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <a class="navbar-brand" href="">Wanderlust</a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -46,32 +49,43 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
               <li class="nav-item">
-                <a class="nav-link" href="#footer">Home</a>
+                <a class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href=>About</a>
+                  <a class="nav-link" href="/">About</a>
                 </li>
               <li class="nav-item">
-                  <a class="nav-link" href=>Discover</a>
+                  <a class="nav-link" href="/discover">Discover</a>
                 </li>
               <li class="nav-item">
-                <a class="nav-link" href="#activities">Favorites</a>
+                <a class="nav-link" href="/favorites">Favorites</a>
               </li>
             </ul>
           </div>
         </nav>
 
       </div>
-    </section> -->
+    </section>
 
-  <!-- </header> -->
+  </header>
 
   <!-- <button>Get Hikes</button> -->
-  <section id="hike-cards">
+  <section id="hike-cards-container" class="row">
+
+    <div class="hike-card">
+      <div class="card-title">
+        <h3>${elem.hike_name}</h3>
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <img class="hike-img" src="${elem.img_url}" alt="">
+      <p>Difficulty: ${elem.hike_dificulty}</p>
+      <p>Rating: ${elem.hike_rating}</p>
+      <p>Location: ${elem.location_name}, ${elem.state}</p>
+    </div>
 
   </section>
 
-
+<!-- JS -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>
 </body>

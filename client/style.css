@@ -9,6 +9,9 @@ body {
   font-family: 'Inter', sans-serif;
   color: aliceblue;
 }
+h1 {
+  font-size: 3rem;
+}
 
 button {
   background-color: rgb(226, 148, 102, 0.7);
@@ -18,6 +21,7 @@ button {
   display: inline-block;
   transition: 0.3s;
   max-width: fit-content;
+  font-size: 1.4rem;
 }
 
 button:hover {
@@ -51,6 +55,11 @@ header {
 
 }
 
+.navbar, .navbar-brand {
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
 #nav {
   height: 60px;
   width: 100%;
@@ -59,10 +68,15 @@ header {
   z-index: 100;
 }
 
+.nav-item, .navbar-brand {
+  margin: 0 25px;
+}
+
 .collapse {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
+
 
 image {
   max-width: 100%;
@@ -70,7 +84,7 @@ image {
 }
 
 #home {
-  margin-top: 15%;
+  margin-top: 25vh;
 }
 
 .home-img {
@@ -92,15 +106,22 @@ image {
 
 /* DISCOVER PAGE */
 
-#hike-cards {
+#hike-cards, .card-title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
+
+/* .card-title {
+  max-width: fit-content;
+} */
 
 .hike-card {
   background-color: rgb(226, 148, 102, 0.7);
   padding: 20px;
+  margin: 80px 20px;
+  width: fit-content;
 }
 
 .hike-card:hover {
@@ -112,4 +133,8 @@ image {
   height: 370px;
   object-fit: cover;
   margin: 20px 0;
+}
+
+#favorites-hike-cards-container, #hike-cards-container {
+  /* display: flex; */
 }

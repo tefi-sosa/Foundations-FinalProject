@@ -34,9 +34,10 @@ module.exports = {
   hikes,
   seed: (req, res) => {
     sequelize.query(`
-    DROP TABLE IF EXISTS hikes;
-    DROP TABLE IF EXISTS favorites;
+    DROP TABLE IF EXISTS hikes cascade;    
     DROP TABLE IF EXISTS location;
+    DROP TABLE IF EXISTS favorites;        
+
 
     create table location (
         location_id serial primary key, 
@@ -68,7 +69,7 @@ module.exports = {
         ('Iguazu National Park', 'Misiones');
 
     insert into hikes (hike_name, hike_dificulty, img_url, hike_distance, hike_elevation, hike_rating, location_id, location_map)
-    values ('Laguna de Lor Tres', 'Moderate', 'https://mapio.net/images-p/46998982.jpg', 12.9, 3326, 5, 1, 'https://goo.gl/maps/JA2gXxizyjM1vxaa7' ),
+    values ('Laguna de los Tres', 'Moderate', 'https://mapio.net/images-p/46998982.jpg', 12.9, 3326, 5, 1, 'https://goo.gl/maps/JA2gXxizyjM1vxaa7' ),
         ('Laguna Torre', 'Hard', 'https://live.staticflickr.com/94/31376760961_6d94eac77d_b.jpg', 11.4, 1771, 4.8, 1,'https://goo.gl/maps/3BNJLnWPw1833bkN6'),
         ('Loma del Pliegue Tumbado', 'Hard', 'https://walk-trek.tur.ar/wp-content/uploads/2020/05/Loma-del-pliegue-10-comp-min-1024x574.jpg', 11.4, 3704, 5, 1, 'https://goo.gl/maps/tcU88LpsoaWnF2T3A' ),
         ('Glaciar Perito Moreno', 'Easy', 'https://www.maravillasdelatierra.com/wp-content/uploads/2019/12/Perito-moreno-001.jpg', 2.9, 623, 4.8, 2, 'https://goo.gl/maps/zauLSQ1aRXoYptd79'),
