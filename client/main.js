@@ -1,5 +1,3 @@
-// const baseURL = `http://localhost:4000/api/hikes`
-
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
@@ -24,7 +22,7 @@ function createHikeCard() {
               let hikeCard = `<div class="hike-card feature-box col-md-6 col-lg-4">
               <div class="card-title">
                 <h3>${elem.hike_name}</h3>
-                <i onclick="addFavorite(${elem.hike_id}); solidStar(${elem.hike_id})" id="${elem.hike_id}" class="${value}" data-toggle="tooltip" data-placement="top" title="Add to Favorites"></i>
+                <a href=""><i onclick="addFavorite(${elem.hike_id})" id="${elem.hike_id}" class="${value}" data-toggle="tooltip" data-placement="top" title="Add to Favorites"></i></a>
               </div>
               <img class="hike-img" src="${elem.img_url}" alt="${elem.hike_name} picture">
               <p>Difficulty: ${elem.hike_dificulty}</p>
@@ -33,12 +31,8 @@ function createHikeCard() {
             </div>
               `
 
-              hikesContainer.innerHTML += hikeCard                
-              
+              hikesContainer.innerHTML += hikeCard                 
             })
-
-
-
 
           })
       })
@@ -46,6 +40,9 @@ function createHikeCard() {
 
 function addFavorite(id) {
   // console.log(id)
+  const star = document.getElementById(`${id}`)
+  star.className = "fa-solid fa-star"
+
   let idObj = {
     hike_id: id
   }
@@ -58,8 +55,7 @@ function addFavorite(id) {
 
 async function solidStar(id) {
   console.log(id)
-  // const star = document.getElementById(`${id}`)
-  // star.className = "fa-solid fa-star"
+
 let favIds = []
 
 await axios.get(`/api/favoritesId`)
@@ -85,73 +81,7 @@ await axios.get(`/api/favoritesId`)
       console.log("not a favorite")
       let className = "fa-regular fa-star"
       return className
-      
 }
-console.log(solidStar(4))
-
-// function normalStar () {
-//   axios.get(`http://localhost:4444/api/favorites`)
-//     .then(res => { 
-//       res.data.forEach(elem => {
-//         if ()
-//       })})
-// }
-
-
-
-// star.addEventListener("click", solidStar)
-
-// function createHikeCard(hike) {
-//   const hikeCard = document.createElement('div')
-//   hikeCard.classList.add('hike-card')
-
-//   hikeCard.innerHTML = `
-//   <h3>${hike.name}</h3>
-//   <img class="hike-img" src="${hike.url}" alt="">
-//   <p>Difficulty: ${hike.difficulty}</p>
-//   <p>Rating: ${hike.rating}</p>
-//   <p>Location: ${hike.location}</p>
-//   `
-
-//   hikesContainer.appendChild(hikeCard)
-// }
-
-
-// const hikesCallback = ({ data: hikes}) => displayHikes(hikes)
-// const errCallback = err => console.log(err)
-
-// const getAllHikes = () => {
-//   axios.get(baseURL).then(hikesCallback).catch(errCallback)
-// }
-
-// export { solidStar }
-
-
-
-
-// function createHikeCard(hike) {
-//   const hikeCard = document.createElement('div')
-//   hikeCard.classList.add('hike-card')
-
-//   hikeCard.innerHTML = `
-//   <h3>${hike.name}</h3>
-//   <img class="hike-img" src="${hike.url}" alt="">
-//   <p>Difficulty: ${hike.difficulty}</p>
-//   <p>Rating: ${hike.rating}</p>
-//   <p>Location: ${hike.location}</p>
-//   `
-
-//   hikesContainer.appendChild(hikeCard)
-// }
-
-// function displayHikes(arr) {
-//   hikesContainer.innerHTML = ``
-//   for (let i = 0; i < arr.length; i++) {
-//       createHikeCard(arr[i])
-//   }
-// }
-
-// getAllHikes()
 
 createHikeCard()
 

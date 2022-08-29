@@ -22,6 +22,7 @@ button {
   transition: 0.3s;
   max-width: fit-content;
   font-size: 1.4rem;
+  /* animation: 1s ease-out 0s 1 slideInFromLeft; */
 }
 
 button:hover {
@@ -70,11 +71,17 @@ a:hover {
   position: fixed;
   display: flex;
   z-index: 100;
+  animation: 1s ease-out 0s 1 slideInFromTop;
 }
 
 .nav-item, .navbar-brand {
   margin: 0 25px;
 }
+
+/* .navbar-nav {
+  background-color: #38343A;
+  transition: 2s;
+} */
 
 .collapse {
   display: flex;
@@ -105,6 +112,7 @@ image {
   position: relative;
   height: calc(100vh - 80vh);
   row-gap: 3rem;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
 }
 
 
@@ -129,6 +137,7 @@ image {
   padding: 20px;
   margin: 80px 20px;
   width: fit-content;
+  animation: 2s ease-in 0s 1 slideInFromTopPartial;
 }
 
 
@@ -146,4 +155,38 @@ image {
 #favorites-hike-cards-container, #hike-cards-container {
   display: flex;
   justify-content: space-around;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTopPartial {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

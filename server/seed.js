@@ -52,7 +52,7 @@ module.exports = {
         img_url varchar(300), 
         hike_distance integer,
         hike_elevation integer,
-        hike_rating integer,
+        hike_rating decimal,
         location_id integer references location(location_id),
         location_map varchar(300)        
     );
