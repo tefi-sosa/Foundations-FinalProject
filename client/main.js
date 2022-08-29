@@ -17,7 +17,7 @@ const hikesContainer = document.querySelector('#hike-cards-container')
 function createHikeCard() {
   hikesContainer.innerHTML = ''
 
-  axios.get(`http://localhost:4444/api/hikes`)
+  axios.get(`/api/hikes`)
       .then(res => {
           res.data.forEach(elem => {
               solidStar(elem.hike_id).then(value => {
@@ -49,7 +49,7 @@ function addFavorite(id) {
   let idObj = {
     hike_id: id
   }
-  axios.post(`http://localhost:4444/api/favorites`, idObj)
+  axios.post(`/api/favorites`, idObj)
       .then(res => {
         console.log("fav added")
       })
@@ -62,7 +62,7 @@ async function solidStar(id) {
   // star.className = "fa-solid fa-star"
 let favIds = []
 
-await axios.get(`http://localhost:4444/api/favoritesId`)
+await axios.get(`/api/favoritesId`)
       .then(res => {
         console.log("fav comparsion")
         console.log(res.data)

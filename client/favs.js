@@ -5,7 +5,7 @@ const favesContainer = document.querySelector('#favorites-hike-cards-container')
 function createFavHikeCard() {
   favesContainer.innerHTML = ''
 
-  axios.get(`http://localhost:4444/api/favorites`)
+  axios.get(`/api/favorites`)
       .then(res => {
           res.data.forEach(elem => {
               let hikeCard = `  <div class="fave-hike-card feature-box col-lg-4">
@@ -31,7 +31,7 @@ function deleteFavorite(id) {
   //   hike_id: id
   // }
   // console.log(idObj)
-  axios.delete(`http://localhost:4444/api/favorites/${id}`)
+  axios.delete(`/api/favorites/${id}`)
       .then(res => {
         console.log("fav deleted")
         createFavHikeCard()
