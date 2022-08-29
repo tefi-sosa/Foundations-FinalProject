@@ -1,3 +1,5 @@
+// import { solidStar } from "./main"
+
 const favesContainer = document.querySelector('#favorites-hike-cards-container')
 
 function createFavHikeCard() {
@@ -9,7 +11,7 @@ function createFavHikeCard() {
               let hikeCard = `  <div class="fave-hike-card feature-box col-lg-4">
               <div class="card-title">
                 <h3>${elem.hike_name}</h3>
-                <i onclick="deleteFavorite(${elem.hike_id})" class="fa-solid fa-xmark"></i>
+                <i onclick="deleteFavorite(${elem.hike_id}); solidStar(${elem.hike_id})" class="fa-solid fa-xmark"></i>
               </div>
               <img class="hike-img" src="${elem.img_url}" alt="${elem.hike_name} picture">
               <p>Difficulty: ${elem.hike_dificulty}</p>

@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static('client'))
 
-const{ getAllHikes, postFavHike, getFavHikes, getHTML, getDiscover, getFavs, getCSS, deleteFavHike } = require("./controller")
+const{ getAllHikes, postFavHike, getFavHikes, getHTML, getDiscover, getFavs, getCSS, deleteFavHike, getFavHikesId } = require("./controller")
 
 /////
 app.get(`/`, getHTML);
@@ -29,6 +29,8 @@ app.post(`/api/favorites`, postFavHike);
 
 app.get(`/api/favorites`, getFavHikes);
 app.delete(`/api/favorites/:id`, deleteFavHike);
+
+app.get(`/api/favoritesId`, getFavHikesId);
 
 
 

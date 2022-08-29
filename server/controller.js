@@ -1,9 +1,9 @@
 require('dotenv').config()
 const path = require('path')
 const Sequelize = require('sequelize')
-const {CONNECTION_STRING} = process.env
+const {DATABASE_URL} = process.env
 
-const sequelize = new Sequelize(CONNECTION_STRING, {
+const sequelize = new Sequelize(DATABASE_URL, {
     dialect: 'postgres', 
     dialectOptions: {
         ssl: {
@@ -77,4 +77,12 @@ module.exports = {
         .catch(err => console.log(err))
   },
 
+  getFavHikesId: (req, res) => {
+    console.log("comparing with favorites");
+    sequelize.query(`select hike_id
+        from favorites
+        `)
+          .then(dbRes => res.status(200).send(dbRes[0]))
+          .catch(err => console.log(err))
+  },
 }

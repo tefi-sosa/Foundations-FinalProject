@@ -33,6 +33,10 @@ a {
   color: aliceblue;
 }
 
+a:hover {
+  color: aliceblue;
+}
+
 .container{
   max-width: 500px;
   margin-left: 15%;
@@ -45,7 +49,7 @@ a {
 
 }
 
-header {
+#header {
   background-color: transparent;
   width: 100%;
   position: fixed;
@@ -60,7 +64,7 @@ header {
   transition: 0.3s;
 }
 
-#nav {
+#nav1 {
   height: 60px;
   width: 100%;
   position: fixed;
@@ -111,11 +115,14 @@ image {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  max-width: fit-content;
 }
 
-/* .card-title {
-  max-width: fit-content;
-} */
+.card-title {
+  /* max-width: fit-content; */
+  justify-content: space-between;
+  min-height: 75px;
+}
 
 .hike-card {
   background-color: rgb(226, 148, 102, 0.7);
@@ -123,6 +130,7 @@ image {
   margin: 80px 20px;
   width: fit-content;
 }
+
 
 .hike-card:hover {
   background-color: rgb(226, 148, 102, 1);
@@ -136,5 +144,6 @@ image {
 }
 
 #favorites-hike-cards-container, #hike-cards-container {
-  /* display: flex; */
+  display: flex;
+  justify-content: space-around;
 }
