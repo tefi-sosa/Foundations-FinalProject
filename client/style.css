@@ -56,7 +56,6 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 100;
-
 }
 
 /* NAVBAR */
@@ -78,11 +77,6 @@ a:hover {
 .nav-item, .navbar-brand {
   margin: 0 25px;
 }
-
-/* .navbar-nav {
-  background-color: #38343A;
-  transition: 2s;
-} */
 
 .collapse {
   display: flex;
@@ -134,7 +128,6 @@ image {
   position: absolute;
   bottom: 4rem;
   text-align: center;
-  /* background-color: rgb(226, 148, 102, 0.5); */
   padding: 5px 0;
   background-color: rgb(27, 26, 30, 0.5);
 
@@ -151,7 +144,6 @@ image {
 }
 
 .hike-card, .fave-hike-card {
-  /* background-color: rgb(226, 148, 102, 0.9); */
   background-color: rgb(27, 26, 30, 0.6);
   padding: 20px;
   margin: 80px 20px;
@@ -179,10 +171,6 @@ image {
 
 /* MODAL RELATED */
 
-.btn-close {
-  color: aliceblue;
-}
-
 .btn-div, .modal-footer{
   display: flex;
   align-items: center;
@@ -191,7 +179,7 @@ image {
 
 .btn-modal {
   max-width: 400px;
-  padding: 1rem 166px;
+  padding: 1rem 167px;
 }
 
 .modal-content {
