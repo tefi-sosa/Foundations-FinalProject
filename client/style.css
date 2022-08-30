@@ -22,7 +22,6 @@ button {
   transition: 0.3s;
   max-width: fit-content;
   font-size: 1.4rem;
-  /* animation: 1s ease-out 0s 1 slideInFromLeft; */
 }
 
 button:hover {
@@ -133,7 +132,7 @@ image {
 }
 
 .hike-card {
-  background-color: rgb(226, 148, 102, 0.7);
+  background-color: rgb(226, 148, 102, 0.9);
   padding: 20px;
   margin: 80px 20px;
   width: fit-content;
@@ -146,8 +145,8 @@ image {
 }
 
 .hike-img {
-  width: 350px;
-  height: 370px;
+  width: 400px;
+  height: 450px;
   object-fit: cover;
   margin: 20px 0;
 }

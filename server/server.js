@@ -21,18 +21,15 @@ app.get(`/favorites`, getFavs);
 const { seed } = require('./seed')
 app.post('/seed', seed);
 
-////
-
+/////
 
 app.get(`/api/hikes`, getAllHikes);
 app.post(`/api/favorites`, postFavHike);
 
-app.get(`/api/favorites`, getFavHikes);
-app.delete(`/api/favorites/:id`, deleteFavHike);
-
 app.get(`/api/favoritesId`, getFavHikesId);
 
-
+app.get(`/api/favorites`, getFavHikes);
+app.delete(`/api/favorites/:id`, deleteFavHike);
 
 
 const port = process.env.PORT || 4000

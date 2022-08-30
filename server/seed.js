@@ -71,7 +71,7 @@ module.exports = {
     insert into hikes (hike_name, hike_dificulty, img_url, hike_distance, hike_elevation, hike_rating, location_id, location_map)
     values ('Laguna de los Tres', 'Moderate', 'https://mapio.net/images-p/46998982.jpg', 12.9, 3326, 5, 1, 'https://goo.gl/maps/JA2gXxizyjM1vxaa7' ),
         ('Laguna Torre', 'Hard', 'https://live.staticflickr.com/94/31376760961_6d94eac77d_b.jpg', 11.4, 1771, 4.8, 1,'https://goo.gl/maps/3BNJLnWPw1833bkN6'),
-        ('Loma del Pliegue Tumbado', 'Hard', 'https://walk-trek.tur.ar/wp-content/uploads/2020/05/Loma-del-pliegue-10-comp-min-1024x574.jpg', 11.4, 3704, 5, 1, 'https://goo.gl/maps/tcU88LpsoaWnF2T3A' ),
+        ('Loma del Pliegue Tumbado', 'Hard', 'https://upload.wikimedia.org/wikipedia/commons/0/08/View_of_laguna_and_peaks_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg', 11.4, 3704, 5, 1, 'https://goo.gl/maps/tcU88LpsoaWnF2T3A' ),
         ('Glaciar Perito Moreno', 'Easy', 'https://www.maravillasdelatierra.com/wp-content/uploads/2019/12/Perito-moreno-001.jpg', 2.9, 623, 4.8, 2, 'https://goo.gl/maps/zauLSQ1aRXoYptd79'),
         ('Circuito Inferior Cataratas del Iguazu', 'Easy', 'https://www.hotelinfo.com.ar/uploads/60ff57d19523b.jpg', 1.3, 203, 4.7, 4, 'https://goo.gl/maps/YGkega2e3UB1huWPA'),
         ('El Hornocal', 'Easy', 'https://www.clarin.com/img/2017/10/13/BJoX9OChZ_1256x620.jpg', 0.7, 229, 4.5, 3, 'https://goo.gl/maps/gqfUnNWwxWfrjZNt7');
