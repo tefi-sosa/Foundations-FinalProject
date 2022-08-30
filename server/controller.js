@@ -54,9 +54,10 @@ module.exports = {
 
   getFavHikes: (req, res) => {
     console.log("getting favorites");
-    sequelize.query(`select f.hike_id, hike_name, hike_dificulty, img_url, hike_distance, hike_elevation, hike_rating, location_id, location_map
+    sequelize.query(`select f.hike_id, hike_name, hike_dificulty, img_url, hike_distance, hike_elevation, hike_rating, h.location_id, location_map, location_name, state
         from favorites f
         join hikes h on h.hike_id = f.hike_id
+        join location l on l.location_id = h.location_id
         `)
           .then(dbRes => res.status(200).send(dbRes[0]))
           .catch(err => console.log(err))

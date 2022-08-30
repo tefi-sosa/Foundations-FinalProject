@@ -14,7 +14,7 @@ h1 {
 }
 
 button {
-  background-color: rgb(226, 148, 102, 0.7);
+  background-color: rgb(226, 148, 102, 0.8);
   border: 0;
   color: aliceblue;
   padding: 1rem 2rem;
@@ -59,6 +59,8 @@ a:hover {
 
 }
 
+/* NAVBAR */
+
 .navbar, .navbar-brand {
   font-size: 1.5rem;
   transition: 0.3s;
@@ -87,6 +89,7 @@ a:hover {
   justify-content: space-between;
 }
 
+/* HOMEPAGE TITLE AND IMG */
 
 image {
   max-width: 100%;
@@ -115,9 +118,9 @@ image {
 }
 
 
-/* DISCOVER PAGE */
+/* DISCOVER AND FAVORITES PAGE */
 
-#hike-cards, .card-title {
+#hike-cards {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -126,13 +129,30 @@ image {
 }
 
 .card-title {
-  /* max-width: fit-content; */
-  justify-content: space-between;
-  min-height: 75px;
+  max-width: fit-content;
+  min-width: 400px;
+  position: absolute;
+  bottom: 4rem;
+  text-align: center;
+  /* background-color: rgb(226, 148, 102, 0.5); */
+  padding: 5px 0;
+  background-color: rgb(27, 26, 30, 0.5);
+
 }
 
-.hike-card {
-  background-color: rgb(226, 148, 102, 0.9);
+.star, .close, .card-title-container {
+  position: relative;
+}
+
+.fa-star, .fa-xmark {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hike-card, .fave-hike-card {
+  /* background-color: rgb(226, 148, 102, 0.9); */
+  background-color: rgb(27, 26, 30, 0.6);
   padding: 20px;
   margin: 80px 20px;
   width: fit-content;
@@ -141,21 +161,49 @@ image {
 
 
 .hike-card:hover {
-  background-color: rgb(226, 148, 102, 1);
+  /* background-color: rgb(226, 148, 102, 1); */
+  /* background-color: rgb(27, 26, 30, 0.9); */
 }
 
 .hike-img {
   width: 400px;
   height: 450px;
   object-fit: cover;
-  margin: 20px 0;
 }
 
 #favorites-hike-cards-container, #hike-cards-container {
+  position: relative;
   display: flex;
   justify-content: space-around;
 }
 
+/* MODAL RELATED */
+
+.btn-close {
+  color: aliceblue;
+}
+
+.btn-div, .modal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-modal {
+  max-width: 400px;
+  padding: 1rem 166px;
+}
+
+.modal-content {
+  background-color: #131314;
+  color: aliceblue;
+}
+
+.location-btn {
+  max-width: 200px;
+}
+
+/* ANIMATIONS */
 
 @keyframes slideInFromLeft {
   0% {
