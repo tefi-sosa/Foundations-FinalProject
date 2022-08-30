@@ -237,3 +237,25 @@ image {
     transform: translateY(0);
   }
 }
+
+/* MEDIA */
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hike-img {
+    width: 325px;
+    height: 380px;
+  }
+
+  .btn-modal {
+    max-width: 325px;
+    padding: 1rem 129px;
+  }
+
+  .card-title {
+    min-width: 325px;
+  }
+}

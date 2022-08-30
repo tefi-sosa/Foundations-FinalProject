@@ -50,7 +50,7 @@ module.exports = {
         hike_name varchar(100), 
         hike_dificulty varchar(100), 
         img_url varchar(300), 
-        hike_distance integer,
+        hike_distance decimal,
         hike_elevation integer,
         hike_rating decimal,
         location_id integer references location(location_id),
