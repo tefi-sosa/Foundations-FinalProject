@@ -38,7 +38,7 @@ function createFavHikeCard() {
                       <p>Elevation: ${elem.hike_elevation} feet</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="${elem.location_map}"><button type="button" class="" >Get Location</button></a>
+                      <a href="${elem.location_map}" target="_blank" ><button type="button" class="" >Get Location</button></a>
                     </div>
                   </div>
                 </div>
@@ -59,5 +59,7 @@ function deleteFavorite(id) {
         createFavHikeCard()
       })
 }
+
+
 
 createFavHikeCard()

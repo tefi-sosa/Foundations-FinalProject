@@ -20,7 +20,7 @@ function createHikeCard() {
               solidStar(elem.hike_id).then(value => {
               let hikeCard = `<div class="hike-card feature-box col-md-6 col-lg-4">
                 <div class="star">
-                <a href=""><i onclick="addFavorite(${elem.hike_id})" id="${elem.hike_id}" class="${value}" data-toggle="tooltip" data-placement="top" title="Add to Favorites"></i></a></div>
+                <a href=""><i onclick="addFavorite(${elem.hike_id},event)" id="${elem.hike_id}" class="${value}" data-toggle="tooltip" data-placement="top" title="Add to Favorites"></i></a></div>
                 <img class="hike-img" src="${elem.img_url}" alt="${elem.hike_name} picture">
                 <div class= "card-title-container" >
                 <div class="card-title">
@@ -48,7 +48,7 @@ function createHikeCard() {
                         <p>Elevation: ${elem.hike_elevation} feet</p>
                       </div>
                       <div class="modal-footer">
-                        <a href="${elem.location_map}"><button type="button" class="location-btn" >Get Location</button></a>
+                        <a href="${elem.location_map}" target="_blank" ><button type="button" class="location-btn" >Get Location</button></a>
                       </div>
                     </div>
                   </div>
@@ -63,10 +63,12 @@ function createHikeCard() {
       })
 }
 
-function addFavorite(id) {
+function addFavorite(id,e) {
   // console.log(id)
+  e.preventDefault()
   const star = document.getElementById(`${id}`)
   star.className = "fa-solid fa-star"
+  star.setAttribute('onclick', `deleteFavorite(${id},event)`) 
 
   let idObj = {
     hike_id: id
@@ -77,6 +79,19 @@ function addFavorite(id) {
       })
 }
 
+
+
+function deleteFavorite(id,e) {
+  e.preventDefault()
+  const star = document.getElementById(`${id}`)
+  star.className = "fa-regular fa-star"
+  star.setAttribute('onclick', `addFavorite(${id},event)`)
+
+  axios.delete(`/api/favorites/${id}`)
+      .then(res => {
+        console.log("fav deleted")
+      })
+}
 
 async function solidStar(id) {
   console.log(id)
@@ -107,6 +122,8 @@ async function solidStar(id) {
     let className = "fa-regular fa-star"
     return className
 }
+
+
 
 createHikeCard()
 
