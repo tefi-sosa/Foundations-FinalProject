@@ -18,11 +18,10 @@ This app was created with HTML, CSS, JavaScript, Bootstrap, Axios, Express, Node
 
 ## Installation
 
-Install my-project with npm
+Install this project with npm
 
 ```bash
-  npm install my-project
-  cd my-project
+  npm install 
 ```
     
 ## Demo
