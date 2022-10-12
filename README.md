@@ -1,4 +1,3 @@
-
 # Wanderlust
 
 This is a hiking web app where you can find and favorite some of the best hiking places in Argentina
@@ -15,6 +14,7 @@ This app was created with HTML, CSS, JavaScript, Bootstrap, Axios, Express, Node
 
 ![App Screenshot](/client/images/wanderlust.1.png?raw=true)
 
+![App Screenshot](/client/images/wanderlust2.png?raw=true)
 
 ## Installation
 
