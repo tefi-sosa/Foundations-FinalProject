@@ -16,13 +16,9 @@ This app was created with HTML, CSS, JavaScript, Bootstrap, Axios, Express, Node
 
 ![App Screenshot](/client/images/wanderlust2.png?raw=true)
 
-## Installation
+## Live Website
 
-Install this project with npm
-
-```bash
-  npm install 
-```
+The live website link is available [here](https://www.loom.com/share/16d6ee57a44c46f1aceff2ac13996d1a)
     
 ## Demo
 
